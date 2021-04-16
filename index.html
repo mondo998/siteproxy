@@ -744,8 +744,8 @@ input::-webkit-input-placeholder {
             <section class="sousuo">
             <div class="search">
                 <div class="search-box">
-                    <button class="search-engine-name" id="search-engine-name">Google搜索</button>
-                    <input type="text" id="txt" class="search-input" placeholder="你不会以为这里能搜索东西吧？？？"/>
+                    <button class="search-engine-name" id="search-engine-name">百度搜索</button>
+                    <input type="text" id="txt" class="search-input" placeholder="请输入内容"/>
                     <button class="search-btn" id="search-btn">搜索</button>
                 </div>
                 <!-- 搜索引擎 -->
@@ -823,7 +823,7 @@ function browserRedirect() {
   });
 
 // 默认搜索引擎的内容，如果界面修改了需要同步修改
-var thisSearch = '/https/www.google.com/search?q=';
+var thisSearch = 'https://www.baidu.com/s?wd=';
 
 $('#txt').keydown(function(ev){
     // 回车键的处理
@@ -849,6 +849,9 @@ $(function(){
     }, {
       name: 'GitHub搜索',
       url: 'https://github.com/search?q='
+    }, {
+      name: '百度搜索',
+      url: 'https://www.baidu.com/s?wd='
     }]
   }
   for(var i = 0; i < search.data.length; i++){
