@@ -744,7 +744,7 @@ input::-webkit-input-placeholder {
             <section class="sousuo">
             <div class="search">
                 <div class="search-box">
-                    <button class="search-engine-name" id="search-engine-name">百度搜索</button>
+                    <button class="search-engine-name" id="search-engine-name">Magi搜索</button>
                     <input type="text" id="txt" class="search-input" placeholder="请输入内容"/>
                     <button class="search-btn" id="search-btn">搜索</button>
                 </div>
@@ -823,7 +823,7 @@ function browserRedirect() {
   });
 
 // 默认搜索引擎的内容，如果界面修改了需要同步修改
-var thisSearch = 'https://www.baidu.com/s?wd=';
+var thisSearch = 'https://bing.com/search?q=';
 
 $('#txt').keydown(function(ev){
     // 回车键的处理
@@ -843,6 +843,9 @@ $(function(){
     }, {
       name: 'Bing搜索',
       url: 'https://bing.com/search?q='
+    }, {
+      name: 'Magi搜索',
+      url: 'https://magi.com/search?q='
     }, {
       name: '图标库搜索',
       url: 'https://www.iconfont.cn/search/index?q='
